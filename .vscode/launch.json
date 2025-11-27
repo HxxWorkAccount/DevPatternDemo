@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach xLua",
+            "type": "LuaHelper-Debug",
+            "request": "launch",
+            "cwd": "",
+            "luaFileExtension": ".lua",
+            "connectionPort": 8818,
+            "stopOnEntry": false,
+            "useCHook": true,
+            "autoPathMode": true
+        },
+        {
+            "name": "Attach Unity C#",
+            "type": "vstuc",
+            "request": "attach"
+        },
+        {
+            "name": "Attach to Unity Build",
+            "type": "vstuc",
+            "request": "attach",
+            "endPoint": "127.0.0.1:56272"
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Attach to Unity",
+            "configurations": [
+                "Attach xLua",
+                "Attach Unity C#"
+            ]
+        }
+    ]
+}

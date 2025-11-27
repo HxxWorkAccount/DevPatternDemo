@@ -1,0 +1,41 @@
+{
+    "files.associations": {
+        "*.lua.txt": "lua",
+        "*.cg": "hlsl"
+    },
+    "material-icon-theme.files.associations": {
+        "*.lua.txt": "lua",
+        "*.cg": "shader"
+    },
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/*.meta": true,
+        "**/*.pdb": true,
+        "build/": true,
+        "Build/": true,
+        "obj/": true,
+        "Obj/": true,
+        "UserSettings/": true,
+        "temp/": true,
+        "Temp/": true,
+        "*.[Cc]sproj": true
+    },
+    "search.exclude": {
+        "[Ll]og": true,
+        "[Ll]ogs": true,
+        "[Ll]ibrary": true
+    },
+    "dotnet.defaultSolution": "Unity-DevPattern.sln",
+    "[csharp]": {
+        "editor.defaultFormatter": "jkillian.custom-local-formatters",
+        "editor.formatOnSave": false,
+        "editor.formatOnType": false
+    },
+    "customLocalFormatters.formatters": [
+        {
+            "command": "python -u Tools/ClangFormat.py \"${file}\"",
+            "languages": ["csharp"]
+        }
+    ]
+}

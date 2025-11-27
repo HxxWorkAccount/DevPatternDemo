@@ -1,0 +1,20 @@
+{
+    "name": "DevPattern.Client",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d1970687ca02685459ee1d1ba1c35209"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        ""
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR || UNITY_CLIENT"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

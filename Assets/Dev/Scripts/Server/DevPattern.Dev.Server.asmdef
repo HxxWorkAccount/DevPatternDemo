@@ -1,0 +1,21 @@
+{
+    "name": "DevPattern.Dev.Server",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d1970687ca02685459ee1d1ba1c35209",
+        "GUID:4a46cdf24b2dd774c93d87554e525970",
+        "GUID:2c8a59c066fdba74280762ded9526b89"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR || UNITY_DEV",
+        "UNITY_EDITOR || UNITY_SERVER"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
