@@ -6,6 +6,8 @@
 
 这一个简单的 Unity 项目脚手架，约 5000 行代码左右。其中代码命名清晰、附有注释，且通过多轮 Gemini 3 Pro AI 代码审查避免基本错误。
 
+部分灵感来自我的另一个项目（[游戏内 CLI 与 xLua 热重载工具](https://github.com/HxxWorkAccount/unity-ingame-cli-with-xlua)），实现该项目的目的是想为自己未来的 Unity 项目提供一个**可复用的基础框架**，
+
 ### Feature
 
 包含以下功能：
@@ -18,7 +20,7 @@
 - 基于 C/S 和发布类型的项目结构划分，可参考[初始化空目录脚本](Tools/InitEmptyProject.py)
 
 #### 编译控制
-提供一个 [Editor GUI 面板](Assets/Editor/Scripts/Build_/BuildControl.cs)）做控制中心。
+提供一个 [Editor GUI 面板](Assets/Editor/Scripts/Build_/BuildControl.cs)做控制中心。
 ![](.Images/2025-11-28-01-02-39.png)
 - 支持基于发布类型、执行环境等因素，[控制编译符号](Assets/Editor/Scripts/Build_/BuildControl.cs)，并**剔除不需要的程序集**
 - 环境宏，目前为了避免频繁切换 PlayerSettings 的编译符号，暂时将 Editor 环境[设为全部启用](Assets/Scripts/DevPattern/Universal/Utils/EnvironmentUtils.cs)
@@ -29,7 +31,7 @@
 #### 编译时资源剔除
 通过重写 Addressables 的 [BuildScriptPackedMode](Assets/Editor/Scripts/Build_/CustomBundledAssetGroupSchema.cs)，支持基于发布类型、执行环境等因素，**剔除不需要的资源**（例如：发布 Server Release 版本，会剔除 Client、Dev 相关的资源）
 
-#### 游戏内置 CLI！！！
+#### 游戏内置 CLI
 启动游戏后，Unity 会启动一个独立的 CLI 进程，可以在该进程上查看 Unity 日志输出（标准输出也会转发到 CLI 上），并且可以通过命令行输入与 Unity 进行实时交互！
 
 ![](.Images/2025-11-28-01-12-40.png)
